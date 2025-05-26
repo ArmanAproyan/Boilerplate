@@ -15,10 +15,10 @@
   &__burger {
     @extend %flex-between;
 
-    width: 20px;
-    height: 16px;
     z-index: 4;
+    width: 20px;
     padding: 5px;
+    height: 16px;
     cursor: pointer;
     box-sizing: content-box;
     flex-direction: column;

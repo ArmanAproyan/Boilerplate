@@ -27,9 +27,9 @@ export const Login = () => {
             )
           })}
           <input type="submit" className={cn('__submit')} value="Sign In" />
-          <span className={cn('__error')}>{errorMessage}</span>
+          <span className={cn('__error-message')}>{errorMessage}</span>
         </form>
-        <p className={cn('__link')}>Forgot password?</p>
+        <p className={cn('__forget-link')}>Forgot password?</p>
       </div>
     </div>
   )

@@ -1,92 +1,100 @@
 .container {
   @extend %flex-center;
 
-  bottom: 70px;
+
   width: 100px;
-  position: fixed;
+  font-family: 'LibreFranklin';
+  flex-direction: column;
   font-weight: 100;
   user-select: none;
-  position: absolute;
-  flex-direction: column;
-  font-family: 'LibreFranklin';
 
   &__toggle {
     @extend %flex-between;
 
-    background-color: $color_black;
-
     width: 100%;
-    cursor: pointer;
     font-size: 16px;
-    text-align: left;
     font-weight: 200;
     padding: 8px 12px;
+    text-align: left;
     border-radius: 6px;
+    cursor: pointer;
     align-items: center;
+
+    background-color: $color-black;
     color: $color-white;
     border: 1px solid $color-white;
 
     &:focus {
       outline: none;
-      border-color: $blur-color;
+      border-color: $color-blur;
     }
   }
 
   &__shadow_1 {
     width: 80px;
-    height: 3px;
-    background-color: gray;
   }
 
   &__shadow_2 {
     width: 70px;
-    height: 3px;
-    background-color: rgb(90, 88, 88);
   }
 
   &__dropdown {
+    box-shadow: $shadow-black;
     background-color: $color-white;
 
     left: 0;
+    margin: 0;
     z-index: 2;
     padding: 0;
-    margin: 0;
     width: 100%;
     bottom: 50px;
-    border-radius: 6px;
-    max-height: 180px;
     overflow-y: auto;
     list-style: none;
     font-weight: 100;
+    max-height: 180px;
+    border-radius: 6px;
     position: absolute;
     font-family: 'LibreFranklin';
-    box-shadow: $black-shadow;
+
   }
 
   &__arrowDown,
-  &__rrowUp {
+  &__arrowUp {
     width: 0;
     height: 0;
-    transition: transform 0.3s ease;
+    margin-left: 8px;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
+    transition: transform 0.3s ease;
+  }
+
+  &__arrowDown {
+    border-top: 6px solid $color-white;
+  }
+
+  &__arrowUp {
+    border-bottom: 6px solid $color-white;
   }
 
   &__item {
-    cursor: pointer;
-    font-weight: 200;
     padding: 8px 12px;
+    font-weight: 200;
+    cursor: pointer;
     transition: background-color 0.2s ease;
 
-    &:hover {
-      outline: none;
-      color: $color-white;
-      background-color: $blur-color;
-    }
-
+    &:hover,
     &:active {
       color: $color-white;
-      background-color: $blur-color;
+      background-color: $color-blur;
+
+      outline: none;
     }
   }
+}
+
+.active {
+  background-color: $color-blur;
+  color: $color-white;
+
+  font-weight: 600;
 }

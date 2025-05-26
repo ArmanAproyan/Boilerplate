@@ -1,9 +1,7 @@
 import { PublicLayout } from '@/layouts'
+import { PUBLIC_META } from '../metaRoutes'
+import { PublicRouteNames, ROUTE, TRoute } from './route.enums'
 import { About, Actions, Contact, Home, Login, NotFound, Products } from '@/containers'
-import { TRoute } from './routes.types'
-import { ROUTE } from './route'
-import { PublicRouteNames } from './routes.types'
-import { PUBLIC_META } from '@/routes'
 
 export const PUBLIC_ROUTES: TRoute[] = [
   {

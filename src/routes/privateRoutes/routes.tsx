@@ -1,17 +1,16 @@
 import { Privatelayout } from '@/layouts'
-import { PRIVATE_ROUTE } from './route'
-import { TRoute } from '@/routes'
-import { PRIVATE_META } from '../metaRoutes'
-import { PrivateRouteNames } from './route'
+import { TRoute } from '../publicRoutes'
+import { PRIVATE_ROUTE, PrivateRouteNames } from './route.enums'
 import { Account, Dashboard, History } from '@/containers'
+import { PRIVATE_META } from '../metaRoutes'
 
 export const PRIVATE_ROUTES: TRoute[] = [
   {
     id: 10,
     name: PrivateRouteNames.DASHBOARD,
-    path: PRIVATE_ROUTE.DASHBORD,
+    path: PRIVATE_ROUTE.DASHBOARD,
     component: (
-      <Privatelayout {...PRIVATE_META[PRIVATE_ROUTE.DASHBORD]}>
+      <Privatelayout {...PRIVATE_META[PRIVATE_ROUTE.DASHBOARD]}>
         <Dashboard />
       </Privatelayout>
     )

@@ -1,11 +1,12 @@
 .blur {
-  position: fixed;
+  background-color: $color-blur;
+
   inset: 0;
   z-index: 5;
-  background-color: $blur-color;
-  backdrop-filter: blur(20px);
   opacity: 0;
+  position: fixed;
   pointer-events: none;
+  backdrop-filter: blur(20px);
   transition: opacity 0.5s ease;
 }
 
@@ -15,19 +16,20 @@
 }
 
 .overlay {
-  position: fixed;
+  @extend %flex-start;
+
+  background-color: $color-white;
+  box-shadow: $shadow-overlay;
+
   top: 0;
   right: 0;
-  z-index: 6;
   width: 35%;
+  z-index: 6;
   height: 100vh;
-  background-color: $color-white;
-  box-shadow: $overlay_shadow;
+  position: fixed;
   flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.7s ease;
-
-  @extend %flex-start;
 }
 
 .active {
@@ -38,39 +40,39 @@
   @extend %flex-end;
   @extend %flex-center;
 
-  border: 1px solid black;
   width: 100%;
   height: 70px;
   padding-right: 15px;
 
   &__nav {
     @extend %flex-start;
-    padding-left: 80px;
+    padding-top: 40px;
+    padding-left: 85px;
   }
 
   &__close {
     @extend %flex-center;
 
+    background-color: $color_black;
+    color: $color-white;
+
     width: 40px;
     height: 40px;
+    transition: 1s;
     font-size: 20px;
     font-weight: 100;
-    font-family: initial;
-    color: $color-white;
-    background-color: $color_black;
+    cursor: pointer;
     border-radius: 50%;
     padding-bottom: 3px;
-    cursor: pointer;
-    transition: 1s;
+    font-family: initial;
 
     &:hover {
       transform: scale(0.8);
     }
-  }
 
-  &__text {
-    font-size: 25px;
-    font-weight: 100;
+    &__icone {
+      font-size: 25px;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 import { PRIVATE_ROUTE } from '@/routes'
 
 export const PRIVATE_META = {
-  [PRIVATE_ROUTE.DASHBORD]: {
+  [PRIVATE_ROUTE.DASHBOARD]: {
     title: 'Dashboard',
     description: 'This is the dashboard'
   },

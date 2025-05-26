@@ -1,3 +1,2 @@
 export * from './routes'
-export * from './routes.types'
-export * from './route'
+export * from './route.enums'

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import styles from './Burger.module.scss'
 import { useClassNames, useLockBodyScroll } from '@/hooks'
 import { OverLay } from 'components'
+
+import styles from './Burger.module.scss'
 
 export const Burger = () => {
   const [isOpen, setIsOpen] = useState(false)

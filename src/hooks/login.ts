@@ -1,7 +1,6 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { PRIVATE_ROUTE } from '@/routes'
-import { ROUTE } from '@/routes/publicRoutes/route'
+import { PRIVATE_ROUTE, ROUTE } from '@/routes'
 import { generateJWT } from '@/infrastructure'
 
 export const useLogin = () => {

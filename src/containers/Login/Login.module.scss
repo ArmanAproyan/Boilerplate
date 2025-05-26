@@ -21,7 +21,7 @@
   }
 
   &__submit {
-    background-color: $info-color;
+    background-color: $color-info;
 
     width: 100%;
     border: none;
@@ -33,30 +33,30 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: $info-color;
+      background-color: $color-info;
     }
   }
 
-  &__error {
-    color: $error-color;
+  &__error-message {
+    color: $color-error;
 
     font-size: 15px;
   }
 
-  &__link {
+  &__forget-link {
     font-size: 15px;
     cursor: pointer;
     margin-top: 16px;
-    color: $info-color;
+    color: $color-info;
     text-decoration: underline;
 
     &:hover {
-      color: $info-color;
+      color: $color-info;
     }
   }
 
   &__input {
-    border: 1px solid $blur-color;
+    border: 1px solid $color-blur;
 
     width: 100%;
     font-size: 16px;
@@ -66,7 +66,7 @@
     transition: border-color 0.3s;
 
     &:focus {
-      border-color: $info-color;
+      border-color: $color-info;
 
       outline: none;
     }

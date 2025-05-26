@@ -1,5 +1,5 @@
 export enum PRIVATE_ROUTE {
-  'DASHBORD' = '/dashbord',
+  'DASHBOARD' = '/dashbord',
   'ACCOUNT' = '/account',
   'HISTORY' = '/history',
   'NOTFOUND' = '*'

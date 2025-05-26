@@ -1,4 +1,4 @@
-import { ROUTE } from '@/routes'
+import { ROUTE } from '@/routes/publicRoutes/route.enums'
 
 export const PUBLIC_META = {
   [ROUTE.HOME]: {

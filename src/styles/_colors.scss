@@ -1,15 +1,16 @@
 $color_black: black;
 $color-white: white;
 
-$main-color: #2f4563;
-$light-gray: #f1f2f6;
+$color-main: #2f4563;
+$color-light-gray: #f1f2f6;
 
-$success-color: #2ed573;
-$error-color: #ff4757;
-$warning-color: #ffa502;
-$info-color: #1e90ff;
+$color-success: #2ed573;
+$color-error: #ff4757;
+$color-warning: #ffa502;
+$color-info: #1e90ff;
 
-$blur-color: rgba(0, 0, 0, 0.4);
+$color-blur: rgba(0, 0, 0, 0.4);
 
-$black-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-$overlay_shadow: 0 4px 12px rgba(255, 251, 251, 0.751);
+$shadow-black: 0 6px 10px rgba(0, 0, 0, 0.3);
+$shadow-overlay: 0 4px 12px rgba(255, 251, 251, 0.751);
+

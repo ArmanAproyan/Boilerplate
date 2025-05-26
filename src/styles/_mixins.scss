@@ -24,12 +24,12 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: $black-shadow;
+    box-shadow: $shadow-black;
   }
 
   &:active {
     transform: scale(0.98);
-    box-shadow: $black-shadow;
+    box-shadow: $shadow-black;
   }
 }
 
@@ -66,7 +66,7 @@
 }
 
 %welcome-title {
-  color: $main-color;
+  color: $color-main;
 
   font-size: 36px;
   margin: 40px 0;
@@ -92,5 +92,5 @@
 %default-title {
   font-size: 25px;
   font-weight: bold;
-  color: $main-color;
+  color: $color-main;
 }

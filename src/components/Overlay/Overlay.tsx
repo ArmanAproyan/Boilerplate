@@ -1,4 +1,4 @@
-import { NavList } from 'components/NavList'
+import { NavList } from 'components'
 import { TOverlay } from './Overlay.types'
 import { useClassNames } from '@/hooks'
 import classNames from 'classnames'
@@ -11,25 +11,18 @@ export const OverLay = ({ isOpen, onClose }: TOverlay) => {
   return (
     <>
       <div
-        className={classNames(styles.blur, {
-          [styles.blur_active]: isOpen
-        })}
+        className={classNames(styles.blur, { [styles.blur_active]: isOpen })}
         onClick={onClose}
       />
 
-      <div
-        className={classNames(styles.overlay, {
-          [styles.active]: isOpen
-        })}
-      >
+      <div className={classNames(styles.overlay, { [styles.active]: isOpen })}>
         <div className={cn()}>
           <div onClick={onClose} className={cn('__close')}>
-            <span className={cn('__text')}>x</span>
+            <span className={cn('__close__icone')}>x</span>
           </div>
-
-          <div className={cn('__nav')}>
-            <NavList onClose={onClose} />
-          </div>
+        </div>
+        <div className={cn('__nav')}>
+          <NavList onClose={onClose} />
         </div>
       </div>
     </>

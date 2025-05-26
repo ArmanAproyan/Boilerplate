@@ -5,9 +5,8 @@ import styles from './NotFound.module.scss'
 import { ROUTE } from '@/routes'
 
 export const NotFound = () => {
-  const { cn } = useClassNames('notFound', styles)
-
   const navigate = useNavigate()
+  const { cn } = useClassNames('notFound', styles)
 
   const navigateToHome = () => {
     navigate(ROUTE.HOME)
