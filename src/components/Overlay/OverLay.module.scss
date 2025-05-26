@@ -1,0 +1,81 @@
+.blur {
+  background-color: $blur-color;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  z-index: 5;
+  transition: opacity 1s ease;
+}
+
+.blur_active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header {
+  @extend %flex-center;
+
+  justify-content: end;
+  padding-right: 15px;
+  width: 100%;
+  height: 70px;
+
+  &__nav {
+    display: flex;
+    justify-content: start;
+    padding-left: 80px;
+  }
+
+  &__close {
+    @extend %flex-center;
+    color: $white-color;
+    background-color: $black-color;
+
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-family: initial;
+    border-radius: 50%;
+    font-weight: 100;
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: 1s;
+
+    span {
+      font-size: 25px;
+      font-weight: 100;
+    }
+
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.overlay {
+  background-color: $white-color;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 35%;
+  transform: translateX(100%);
+  transition: transform 1s ease;
+  box-shadow: 0 4px 12px rgba(255, 251, 251, 0.751);
+  z-index: 6;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+@include max-breakpoint(tablet) {
+  .overlay {
+    width: 100%;
+  }
+}

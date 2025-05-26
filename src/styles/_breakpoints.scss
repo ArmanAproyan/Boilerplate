@@ -1,0 +1,18 @@
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+@function breakpoint($size) {
+  @if $size == mobile {
+    @return $mobile;
+  } @else if $size == tablet {
+    @return $tablet;
+  } @else if $size == laptop {
+    @return $laptop;
+  } @else if $size == desktop {
+    @return $desktop;
+  } @else {
+    @error "Unknown breakpoint: #{$size}";
+  }
+}

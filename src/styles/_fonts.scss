@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'LibreFranklin';
+  src: url('/src/assets/fonts/LibreFranklin-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Syne';
+  src: url('/src/assets/fonts/Syne-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Tagesschrift';
+  src: url('/src/assets/fonts/Tagesschrift-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

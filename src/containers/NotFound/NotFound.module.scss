@@ -1,0 +1,40 @@
+.notFound {
+  @extend %flex-center;
+  height: 100vh;
+  text-align: center;
+  background-color: $white-color;
+  color: $black-color;
+
+  &__content {
+    max-width: 600px;
+    padding: 16px;
+
+    &__title {
+      font-size: 100px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      color: $error-color;
+    }
+
+    &__message {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    &__button {
+      @extend %flex-center;
+
+      background: $warning-color;
+      height: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: $white-color;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}

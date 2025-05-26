@@ -1,0 +1,89 @@
+.container {
+  @extend %flex-center;
+  position: fixed;
+  bottom: 70px;
+  width: 100px;
+  user-select: none;
+  position: absolute;
+  flex-direction: column;
+  font-weight: 100;
+  font-family: 'LibreFranklin';
+
+  &__toggle {
+    @extend %flex-between;
+
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: $black-color;
+    border: 1px solid #ccc;
+    color: $white-color;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    align-items: center;
+    font-weight: 200;
+
+    &:focus {
+      outline: none;
+      border-color: $blur-color;
+    }
+  }
+
+  &__shadow_1 {
+    width: 80px;
+    height: 3px;
+    background-color: gray;
+  }
+
+  &__shadow_2 {
+    width: 70px;
+    height: 3px;
+    background-color: rgb(90, 88, 88);
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    background-color: $white-color;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-height: 180px;
+    overflow-y: auto;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'LibreFranklin';
+    font-weight: 100;
+  }
+
+  &__arrowDown,
+  &__rrowUp {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    transition: transform 0.3s ease;
+  }
+
+  &__item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: 200;
+
+    &:hover {
+      background-color: $blur-color;
+      color: $white-color;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $blur-color;
+      color: $white-color;
+    }
+  }
+}

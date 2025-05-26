@@ -1,0 +1,17 @@
+.title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: $main-color;
+  text-align: center;
+  margin: 40px 0;
+
+  @include max-breakpoint(tablet) {
+    font-size: 28px;
+  }
+
+  @include max-breakpoint(mobile) {
+    font-size: 22px;
+    margin: 24px 0;
+  }
+}

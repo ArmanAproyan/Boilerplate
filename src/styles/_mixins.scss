@@ -1,0 +1,74 @@
+@use './colors' as *;
+@use './breakpoints' as *;
+
+@mixin max-breakpoint($size) {
+  @media (max-width: #{breakpoint($size)}) {
+    @content;
+  }
+}
+
+@mixin min-breakpoint($size) {
+  @media (min-width: #{breakpoint($size)}) {
+    @content;
+  }
+}
+
+%primary-button {
+  height: 30px;
+  background-color: $black-color;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%welcome-title {
+  color: $main-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0;
+
+  @include max-breakpoint(tablet) {
+    font-size: 28px;
+  }
+
+  @include max-breakpoint(mobile) {
+    font-size: 22px;
+    margin: 24px 0;
+  }
+}
+
+%main-container {
+  width: 100%;
+  height: auto;
+}
+
+%default-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: $main-color;
+}
