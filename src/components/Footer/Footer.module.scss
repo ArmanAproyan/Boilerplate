@@ -1,9 +1,10 @@
 .footer {
   @extend %flex-center;
+
   color: $main-color;
+  background-color: $color-white;
 
   width: 100%;
   z-index: 3;
   padding: 16px 32px;
-  background-color: $white-color;
 }

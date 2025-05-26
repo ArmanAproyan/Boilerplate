@@ -1,12 +1,8 @@
-$main-color: #2f4563;
-$secondary-color: #ff6b6b;
-$accent-color: #feca57;
-$dark-color: #2f3542;
-$light-color: #f1f2f6;
+$color_black: black;
+$color-white: white;
 
-$text-primary: #2f3542;
-$text-secondary: #57606f;
-$text-light: #ffffff;
+$main-color: #2f4563;
+$light-gray: #f1f2f6;
 
 $success-color: #2ed573;
 $error-color: #ff4757;
@@ -15,5 +11,5 @@ $info-color: #1e90ff;
 
 $blur-color: rgba(0, 0, 0, 0.4);
 
-$black-color: black;
-$white-color: white;
+$black-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+$overlay_shadow: 0 4px 12px rgba(255, 251, 251, 0.751);

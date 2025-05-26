@@ -1,30 +1,24 @@
+@use '../../styles/animations';
+
 .menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
+
   gap: 32px;
+  list-style: none;
 
-  li {
-    opacity: 0;
-    transform: translateY(20px);
+  &__li {
+    cursor: pointer;
     animation: fadeIn 0.4s ease forwards;
-    cursor: pointer;
   }
 
-  span {
-    color: $black-color;
+  &__text {
+    color: $color_black;
+
     font-size: 19px;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
     cursor: pointer;
-  }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
 }

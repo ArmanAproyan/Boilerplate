@@ -1,32 +1,35 @@
 .container {
   @extend %flex-center;
+
   height: 100vh;
 
   &__card {
-    background-color: $white-color;
-    padding: 32px;
-    border-radius: 16px;
+    background-color: $color-white;
+
     width: 100%;
+    padding: 32px;
     max-width: 400px;
     text-align: center;
+    border-radius: 16px;
 
     &__title {
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 22px;
-      color: $black-color;
+      color: $color_black;
     }
   }
 
   &__submit {
-    width: 100%;
-    padding: 10px 16px;
     background-color: $info-color;
-    color: $white-color;
+
+    width: 100%;
     border: none;
-    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: $color-white;
     transition: background-color 0.3s;
 
     &:hover {
@@ -36,14 +39,15 @@
 
   &__error {
     color: $error-color;
+
     font-size: 15px;
   }
 
   &__link {
-    margin-top: 16px;
     font-size: 15px;
-    color: $info-color;
     cursor: pointer;
+    margin-top: 16px;
+    color: $info-color;
     text-decoration: underline;
 
     &:hover {
@@ -52,16 +56,18 @@
   }
 
   &__input {
-    width: 100%;
-    padding: 12px 16px;
-    margin-bottom: 16px;
     border: 1px solid $blur-color;
-    border-radius: 8px;
+
+    width: 100%;
     font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
     transition: border-color 0.3s;
 
     &:focus {
       border-color: $info-color;
+
       outline: none;
     }
   }

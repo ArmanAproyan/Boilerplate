@@ -1,19 +1,22 @@
 .notFound {
   @extend %flex-center;
+
+  background-color: $color-white;
+  color: $color_black;
+
   height: 100vh;
   text-align: center;
-  background-color: $white-color;
-  color: $black-color;
 
   &__content {
-    max-width: 600px;
     padding: 16px;
+    max-width: 600px;
 
     &__title {
+      color: $error-color;
+
       font-size: 100px;
       font-weight: bold;
       margin-bottom: 16px;
-      color: $error-color;
     }
 
     &__message {
@@ -25,12 +28,13 @@
       @extend %flex-center;
 
       background: $warning-color;
+
       height: 30px;
-      border-radius: 10px;
       cursor: pointer;
       font-size: 18px;
-      color: $white-color;
       transition: 0.5s;
+      color: $color-white;
+      border-radius: 10px;
 
       &:hover {
         transform: scale(1.01);

@@ -3,12 +3,7 @@ import { PropsWithChildren } from 'react'
 import { useClassNames } from '@/hooks'
 
 import styles from './Layout.module.scss'
-
-type PublicLayoutProps = {
-  title: string
-  description: string
-  showHeaderFooter?: boolean
-}
+import { PublicLayoutProps } from './PublicLayout.types'
 
 export const PublicLayout = ({
   title,

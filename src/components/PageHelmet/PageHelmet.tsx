@@ -5,11 +5,9 @@ import { PropsWithChildren } from 'react'
 export const PageHelmet = ({
   title = 'Gucci',
   description = 'Default description'
-}: PropsWithChildren<THelmetProps>) => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-    </Helmet>
-  )
-}
+}: PropsWithChildren<THelmetProps>) => (
+  <Helmet>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </Helmet>
+)

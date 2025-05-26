@@ -1,12 +1,12 @@
 .blur {
-  background-color: $blur-color;
-  opacity: 0;
-  pointer-events: none;
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(20px);
   z-index: 5;
-  transition: opacity 1s ease;
+  background-color: $blur-color;
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 .blur_active {
@@ -14,64 +14,64 @@
   pointer-events: all;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  width: 35%;
+  height: 100vh;
+  background-color: $color-white;
+  box-shadow: $overlay_shadow;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+
+  @extend %flex-start;
+}
+
+.active {
+  transform: translateX(0);
+}
+
 .header {
+  @extend %flex-end;
   @extend %flex-center;
 
-  justify-content: end;
-  padding-right: 15px;
+  border: 1px solid black;
   width: 100%;
   height: 70px;
+  padding-right: 15px;
 
   &__nav {
-    display: flex;
-    justify-content: start;
+    @extend %flex-start;
     padding-left: 80px;
   }
 
   &__close {
     @extend %flex-center;
-    color: $white-color;
-    background-color: $black-color;
 
     width: 40px;
     height: 40px;
     font-size: 20px;
-    font-family: initial;
-    border-radius: 50%;
     font-weight: 100;
+    font-family: initial;
+    color: $color-white;
+    background-color: $color_black;
+    border-radius: 50%;
     padding-bottom: 3px;
     cursor: pointer;
     transition: 1s;
-
-    span {
-      font-size: 25px;
-      font-weight: 100;
-    }
 
     &:hover {
       transform: scale(0.8);
     }
   }
-}
 
-.overlay {
-  background-color: $white-color;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 35%;
-  transform: translateX(100%);
-  transition: transform 1s ease;
-  box-shadow: 0 4px 12px rgba(255, 251, 251, 0.751);
-  z-index: 6;
-}
-
-.active {
-  transform: translateX(0);
+  &__text {
+    font-size: 25px;
+    font-weight: 100;
+  }
 }
 
 @include max-breakpoint(tablet) {

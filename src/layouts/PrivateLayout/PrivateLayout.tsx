@@ -3,24 +3,21 @@ import { Header, Footer, PageHelmet } from 'components'
 import { PropsWithChildren } from 'react'
 import { ROUTE } from '@/routes'
 import { useClassNames } from '@/hooks'
+import { PrivateLayoutProps } from './PrivateLayout.types'
 
 import styles from './PrivateLayout.module.scss'
 
-type PrivateLayoutProps = {
-  title: string
-  description: string
-}
-
 export const Privatelayout = ({
   title,
-  description,
-  children
+  children,
+  description
 }: PropsWithChildren<PrivateLayoutProps>) => {
   const { cn } = useClassNames('layout', styles)
 
   if (!localStorage.getItem('token')) {
     return <Navigate to={ROUTE.LOGIN} />
   }
+
   return (
     <div className={cn()}>
       <PageHelmet title={title} description={description} />

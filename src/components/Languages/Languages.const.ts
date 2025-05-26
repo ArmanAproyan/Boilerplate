@@ -1,4 +1,9 @@
+export enum CODE {
+  RU = 'ru',
+  EN = 'en'
+}
+
 export const LANGUAGES = [
-  { code: 'ru', label: 'Русский' },
-  { code: 'en', label: 'English' }
+  { code: CODE.RU, label: 'Русский' },
+  { code: CODE.EN, label: 'English' }
 ]

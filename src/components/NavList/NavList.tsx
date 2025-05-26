@@ -20,13 +20,13 @@ export const NavList = ({ onClose }: TNavlist) => {
 
   return (
     <ul className={cn()}>
-      {visibleRoutes.map(({ path, name, id }) => {
-        return (
-          <li key={id}>
-            <span onClick={() => handleClick(path)}>{name}</span>
-          </li>
-        )
-      })}
+      {visibleRoutes.map(({ path, name, id }) => (
+        <li className={cn('__li')} key={id}>
+          <span className={cn('__text')} onClick={() => handleClick(path)}>
+            {name}
+          </span>
+        </li>
+      ))}
     </ul>
   )
 }

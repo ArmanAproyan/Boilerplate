@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { PUBLIC_ROUTES, PRIVATE_ROUTES } from '@/routes'
 
-export const RouterProvder = () => (
+export const RouterProvider = () => (
   <BrowserRouter>
     <HelmetProvider>
       <Routes>

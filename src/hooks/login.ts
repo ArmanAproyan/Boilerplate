@@ -5,14 +5,17 @@ import { ROUTE } from '@/routes/publicRoutes/route'
 import { generateJWT } from '@/infrastructure'
 
 export const useLogin = () => {
-  const [data, setData] = useState({ userName: '', password: '' })
-  const [errrorMessage, setErrorMessage] = useState<string>('')
   const navigate = useNavigate()
 
-  const storedAuth = localStorage.getItem('authentication')
-  const { userName, password } = storedAuth ? JSON.parse(storedAuth) : null
+  const [errrorMessage, setErrorMessage] = useState<string>('')
+  const [data, setData] = useState({ userName: '', password: '' })
 
   const token = localStorage.getItem('token')
+  const storedAuth = localStorage.getItem('authentication')
+
+  const { userName: storageUserName, password: storagePassword } = storedAuth
+    ? JSON.parse(storedAuth)
+    : null
 
   useEffect(() => {
     if (token) {
@@ -21,9 +24,11 @@ export const useLogin = () => {
   }, [navigate, token])
 
   const handleSubmit = (e: FormEvent) => {
+    const { userName, password } = data
     e.preventDefault()
+
     if (userName && password) {
-      if (data.userName === userName && data.password === password) {
+      if (userName === storageUserName && password === storagePassword) {
         generateJWT()
         navigate(PRIVATE_ROUTE.ACCOUNT)
       } else {
@@ -36,6 +41,7 @@ export const useLogin = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
+
     setData((prev) => ({
       ...prev,
       [name]: value

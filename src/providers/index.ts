@@ -1,1 +1,1 @@
-export * from './RoutesProvider'
+export * from './routesProvider'

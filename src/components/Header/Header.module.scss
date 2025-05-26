@@ -2,10 +2,11 @@
   @extend %flex-center;
   @extend %flex-between;
 
-  background-color: $white-color;
-  padding: 32px 64px;
+  color: $color_black;
+  background-color: $color-white;
+
   height: 56px;
-  color: $black-color;
+  padding: 32px 64px;
 
   @include max-breakpoint(laptop) {
     padding: 25px 13px;
@@ -25,17 +26,18 @@
   }
 
   &__login {
-    cursor: pointer;
     @extend %flex-center;
     @extend %primary-button;
 
-    color: $white-color;
+    color: $color-white;
+
+    cursor: pointer;
     padding: 8px;
 
     @include max-breakpoint(mobile) {
       height: 28px;
-      border-radius: 8px;
       font-size: 14px;
+      border-radius: 8px;
     }
   }
 

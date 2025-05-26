@@ -1,28 +1,30 @@
 .container {
   @extend %flex-center;
-  position: fixed;
+
   bottom: 70px;
   width: 100px;
+  position: fixed;
+  font-weight: 100;
   user-select: none;
   position: absolute;
   flex-direction: column;
-  font-weight: 100;
   font-family: 'LibreFranklin';
 
   &__toggle {
     @extend %flex-between;
 
+    background-color: $color_black;
+
     width: 100%;
-    padding: 8px 12px;
-    font-size: 16px;
-    background-color: $black-color;
-    border: 1px solid #ccc;
-    color: $white-color;
-    border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
     text-align: left;
-    align-items: center;
     font-weight: 200;
+    padding: 8px 12px;
+    border-radius: 6px;
+    align-items: center;
+    color: $color-white;
+    border: 1px solid $color-white;
 
     &:focus {
       outline: none;
@@ -43,47 +45,48 @@
   }
 
   &__dropdown {
-    position: absolute;
+    background-color: $color-white;
+
     left: 0;
-    bottom: 50px;
-    width: 100%;
-    background-color: $white-color;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    max-height: 180px;
-    overflow-y: auto;
     z-index: 2;
     padding: 0;
     margin: 0;
+    width: 100%;
+    bottom: 50px;
+    border-radius: 6px;
+    max-height: 180px;
+    overflow-y: auto;
     list-style: none;
-    font-family: 'LibreFranklin';
     font-weight: 100;
+    position: absolute;
+    font-family: 'LibreFranklin';
+    box-shadow: $black-shadow;
   }
 
   &__arrowDown,
   &__rrowUp {
     width: 0;
     height: 0;
+    transition: transform 0.3s ease;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    transition: transform 0.3s ease;
   }
 
   &__item {
-    padding: 8px 12px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
     font-weight: 200;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: $blur-color;
-      color: $white-color;
       outline: none;
+      color: $color-white;
+      background-color: $blur-color;
     }
 
     &:active {
+      color: $color-white;
       background-color: $blur-color;
-      color: $white-color;
     }
   }
 }

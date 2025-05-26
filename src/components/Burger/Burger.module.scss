@@ -1,11 +1,12 @@
 .navbar {
   @extend %flex-between;
 
-  color: $white-color;
+  color: $color-white;
+
   gap: 15px;
-  padding: 19px 32px;
-  position: relative;
   z-index: 6;
+  position: relative;
+  padding: 19px 32px;
 
   @include max-breakpoint(mobile) {
     padding: 17px 16px;
@@ -16,25 +17,28 @@
 
     width: 20px;
     height: 16px;
-    flex-direction: column;
-    cursor: pointer;
     z-index: 4;
-    box-sizing: content-box;
     padding: 5px;
+    cursor: pointer;
+    box-sizing: content-box;
+    flex-direction: column;
 
     &__line {
-      background-color: $black-color;
+      background-color: $color_black;
+
       height: 2px;
       border-radius: 2px;
     }
 
     &__text {
       @extend %flex-center;
-      text-transform: uppercase;
-      color: $black-color;
+
+      color: $color_black;
+
       font-size: 12px;
-      font-weight: 200;
       cursor: pointer;
+      font-weight: 200;
+      text-transform: uppercase;
 
       @include max-breakpoint(mobile) {
         display: none;
