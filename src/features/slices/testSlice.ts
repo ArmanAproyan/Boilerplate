@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {}
 
-const testSlice = createSlice({
+export const { reducer: babkenChobanyanReducer, actions } = createSlice({
   initialState,
   name: 'test',
   reducers: {
@@ -13,5 +13,4 @@ const testSlice = createSlice({
     }
   }
 })
-export const { test } = testSlice.actions
-export default testSlice.reducer
+export const { test } = actions

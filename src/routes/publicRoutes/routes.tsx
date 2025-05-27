@@ -29,7 +29,7 @@ export const PUBLIC_ROUTES: TRoute[] = [
     name: PublicRouteNames.NOTFOUND,
     path: ROUTE.NOTFOUND,
     component: (
-      <PublicLayout {...PUBLIC_META[ROUTE.NOTFOUND]} showHeaderFooter={false}>
+      <PublicLayout {...PUBLIC_META[ROUTE.NOTFOUND]} hasHeaderFooter={false}>
         <NotFound />
       </PublicLayout>
     )

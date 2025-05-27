@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useOutSideClick, useClassNames } from '@/hooks'
-import { LANGUAGES } from './Languages.const'
+import { CODE, LANGUAGES } from './Languages.const'
+import classNames from 'classnames'
 
 import styles from './Languages.module.scss'
 
@@ -11,31 +12,36 @@ export const Languages = () => {
   const dropdownRef = useOutSideClick(() => setOpen(false))
   const { cn } = useClassNames('container', styles)
 
-  const handleSelect = (code: string) => {
+  const handleSelect = (code: CODE) => {
     i18n.changeLanguage(code)
     setOpen(false)
   }
 
-  const currentLang = LANGUAGES.find((lang) => lang.code === i18n.language) || LANGUAGES[0]
+  const { code: langCode, label: langLabel } =
+    LANGUAGES.find(({ code }) => code === i18n.language) || LANGUAGES[0]
 
   return (
     <div className={cn()} ref={dropdownRef}>
-      <button className={cn('__toggle')} onClick={() => setOpen((prev) => !prev)} type="button">
-        {currentLang.label}
-        <span className={open ? cn('__arrowUp') : cn('__arrowDown')} />
-      </button>
-
+      <div className={cn('__toggle')} onClick={() => setOpen((prev) => !prev)}>
+        {langLabel}
+        <span
+          className={classNames(cn('__arrowUp'), {
+            [cn('__arrowUp_active')]: open
+          })}
+        />
+      </div>
       {open && (
         <ul className={cn('__dropdown')}>
-          {LANGUAGES.map((lang) => (
+          {LANGUAGES.map(({ code, label }) => (
             <li
-              key={lang.code}
-              className={`${cn('__item')} ${lang.code === currentLang.code ? styles.active : ''}`}
-              onClick={() => handleSelect(lang.code)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSelect(lang.code)}
-              tabIndex={0}
+              key={code}
+              className={classNames(cn('__item'), {
+                [cn('__item_active')]: code === langCode
+              })}
+              onClick={() => handleSelect(code)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSelect(code)}
             >
-              {lang.label}
+              {label}
             </li>
           ))}
         </ul>

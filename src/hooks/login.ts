@@ -17,9 +17,9 @@ export const useLogin = () => {
     : null
 
   useEffect(() => {
-    if (token) {
-      navigate(ROUTE.HOME)
-    }
+    if (!token) return
+
+    navigate(ROUTE.HOME)
   }, [navigate, token])
 
   const handleSubmit = (e: FormEvent) => {

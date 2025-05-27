@@ -1,46 +1,29 @@
 .container {
   @extend %flex-center;
 
-
-  width: 100px;
-  font-family: 'LibreFranklin';
+  position: relative;
   flex-direction: column;
-  font-weight: 100;
   user-select: none;
 
   &__toggle {
     @extend %flex-between;
+    @extend %flex-align-center;
 
-    width: 100%;
+    color: $color_white;
+    background-color: $color_black;
+
     font-size: 16px;
-    font-weight: 200;
-    padding: 8px 12px;
-    text-align: left;
-    border-radius: 6px;
     cursor: pointer;
-    align-items: center;
-
-    background-color: $color-black;
-    color: $color-white;
-    border: 1px solid $color-white;
-
-    &:focus {
-      outline: none;
-      border-color: $color-blur;
-    }
-  }
-
-  &__shadow_1 {
-    width: 80px;
-  }
-
-  &__shadow_2 {
-    width: 70px;
+    min-width: 120px;
+    font-weight: 200;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
   }
 
   &__dropdown {
     box-shadow: $shadow-black;
-    background-color: $color-white;
+    background-color: $color_white;
 
     left: 0;
     margin: 0;
@@ -54,47 +37,42 @@
     max-height: 180px;
     border-radius: 6px;
     position: absolute;
-    font-family: 'LibreFranklin';
-
   }
 
-  &__arrowDown,
   &__arrowUp {
+    border-bottom: 6px solid $color_white;
+
     width: 0;
     height: 0;
     margin-left: 8px;
+    transition: transform 0.3s ease;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    transition: transform 0.3s ease;
-  }
 
-  &__arrowDown {
-    border-top: 6px solid $color-white;
-  }
-
-  &__arrowUp {
-    border-bottom: 6px solid $color-white;
+    &_active {
+      transform: rotate(180deg);
+    }
   }
 
   &__item {
-    padding: 8px 12px;
-    font-weight: 200;
     cursor: pointer;
+    font-weight: 200;
+    padding: 8px 12px;
     transition: background-color 0.2s ease;
+
+    &_active {
+      color: $color_white;
+      background-color: $color_black;
+
+      font-weight: 600;
+    }
 
     &:hover,
     &:active {
-      color: $color-white;
-      background-color: $color-blur;
+      color: $color_white;
+      background-color: $color_blur;
 
       outline: none;
     }
   }
-}
-
-.active {
-  background-color: $color-blur;
-  color: $color-white;
-
-  font-weight: 600;
 }

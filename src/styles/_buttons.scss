@@ -1,0 +1,21 @@
+@use './colors' as *;
+
+%primary-button {
+  background-color: $color_black;
+
+  height: 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-black;
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: $shadow-black;
+  }
+}

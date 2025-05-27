@@ -18,9 +18,9 @@ export const Header = () => {
         <GucciLogo onClick={() => navigate(ROUTE.HOME)} className={cn('__logo')} />
       </div>
       <div className={cn('__rightSection')}>
-        <span className={cn('__login')} onClick={handleAuthToggle}>
+        <div className={cn('__login')} onClick={handleAuthToggle}>
           {logInfo}
-        </span>
+        </div>
         <Burger />
       </div>
     </header>

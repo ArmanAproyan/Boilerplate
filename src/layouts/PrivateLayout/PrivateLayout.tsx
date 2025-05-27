@@ -1,17 +1,12 @@
 import { Navigate } from 'react-router-dom'
 import { Header, Footer, PageHelmet } from 'components'
-import { PropsWithChildren } from 'react'
 import { ROUTE } from '@/routes'
 import { useClassNames } from '@/hooks'
 import { PrivateLayoutProps } from './PrivateLayout.types'
 
 import styles from './PrivateLayout.module.scss'
 
-export const Privatelayout = ({
-  title,
-  children,
-  description
-}: PropsWithChildren<PrivateLayoutProps>) => {
+export const Privatelayout = ({ title, description, children }: PrivateLayoutProps) => {
   const { cn } = useClassNames('layout', styles)
 
   if (!localStorage.getItem('token')) {

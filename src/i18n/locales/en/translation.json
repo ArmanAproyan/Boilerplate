@@ -1,6 +1,25 @@
 {
-  "description": "This is a modern and stylish home page",
-  "notFound": "Page is notFound 404",
-  "homePageWelcome": "Home",
-  "aboutPageWelcome": "About"
+  "NotFoundPage": "Page is notFound 404",
+  "AboutPage": "Welcome to About",
+  "AccauntPage": "Welcome",
+  "ActionsPage": "Welcome to Actions",
+  "ContactPage": "Welcome to Contacts",
+  "DashboardPage": "Welcome to Dashboard",
+  "HistoryPage": "Welcome to History",
+  "HomePage": "Welcome to Home",
+  "LoginPage": "Login",
+  "ProductsPage": "Welcome to Products",
+
+  "Home": "Home",
+  "About": "About",
+  "Accoiunt": "Account",
+  "Actions": "Actions",
+  "Contact": "Contact",
+  "Dashboard": "Dashboard",
+  "History": "History",
+  "Login": "Login",
+  "NotFound": "Not Found",
+  "Products": "Products",
+
+  "ForgetPassword": "Forget Password ?"
 }

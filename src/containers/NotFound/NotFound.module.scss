@@ -1,7 +1,7 @@
 .notFound {
   @extend %flex-center;
 
-  background-color: $color-white;
+  background-color: $color_white;
   color: $color_black;
 
   height: 100vh;
@@ -12,7 +12,7 @@
     max-width: 600px;
 
     &__title {
-      color: $color-error;
+      color: $color_error;
 
       font-size: 100px;
       font-weight: bold;
@@ -27,8 +27,8 @@
     &__button {
       @extend %flex-center;
 
-      background: $color-warning;
-      color: $color-white;
+      color: $color_white;
+      background: $color_warning;
 
       height: 30px;
       font-size: 18px;

@@ -1,9 +1,9 @@
+import { babkenChobanyanReducer } from '@/features/slices'
 import { configureStore } from '@reduxjs/toolkit'
-import testSlice from '@/features/slices/testSlice'
 
 const store = configureStore({
   reducer: {
-    testSlice
+    babkenChobanyanReducer
   }
 })
 

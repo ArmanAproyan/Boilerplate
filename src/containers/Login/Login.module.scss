@@ -3,8 +3,8 @@
 
   height: 100vh;
 
-  &__card {
-    background-color: $color-white;
+  &__login-block {
+    background-color: $color_white;
 
     width: 100%;
     padding: 32px;
@@ -13,15 +13,17 @@
     border-radius: 16px;
 
     &__title {
+      color: $color_black;
+
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 22px;
-      color: $color_black;
     }
   }
 
   &__submit {
-    background-color: $color-info;
+    color: $color_white;
+    background-color: $color_info;
 
     width: 100%;
     border: none;
@@ -29,34 +31,34 @@
     cursor: pointer;
     border-radius: 8px;
     padding: 10px 16px;
-    color: $color-white;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: $color-info;
+      background-color: $color_info;
     }
   }
 
   &__error-message {
-    color: $color-error;
+    color: $color_error;
 
     font-size: 15px;
   }
 
   &__forget-link {
+    color: $color_info;
+
     font-size: 15px;
     cursor: pointer;
     margin-top: 16px;
-    color: $color-info;
     text-decoration: underline;
 
     &:hover {
-      color: $color-info;
+      color: $color_info;
     }
   }
 
   &__input {
-    border: 1px solid $color-blur;
+    border: 1px solid $color_blur;
 
     width: 100%;
     font-size: 16px;
@@ -66,7 +68,7 @@
     transition: border-color 0.3s;
 
     &:focus {
-      border-color: $color-info;
+      border-color: $color_info;
 
       outline: none;
     }

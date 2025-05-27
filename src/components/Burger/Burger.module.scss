@@ -1,7 +1,7 @@
 .navbar {
   @extend %flex-between;
 
-  color: $color-white;
+  color: $color_white;
 
   gap: 15px;
   z-index: 6;

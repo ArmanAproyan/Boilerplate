@@ -1,9 +1,12 @@
 import { ReactNode } from 'react'
+import { PRIVATE_ROUTE } from '../privateRoutes'
+
+export type TPath = ROUTE | PRIVATE_ROUTE
 
 export type TRoute = {
   id: number
   name: string
-  path: string
+  path: TPath
   component: ReactNode
 }
 

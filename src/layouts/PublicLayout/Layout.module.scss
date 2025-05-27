@@ -1,8 +1,8 @@
 .layout {
-  background-color: $color-light-gray;
+  @extend %flex-column;
 
-  display: flex;
-  flex-direction: column;
+  background-color: $color_light-gray;
+
   min-height: 100vh;
 
   &__main {

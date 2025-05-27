@@ -1,6 +1,1 @@
-export { ReactComponent as IconT } from './scissor.svg'
-export { ReactComponent as IconT2 } from './icon.svg'
 export { ReactComponent as GucciLogo } from './gucci-logo.svg'
-export { ReactComponent as SearchIcon } from './search-icone.svg'
-export { ReactComponent as PersonIcon } from './person-icone.svg'
-export { ReactComponent as Bag } from './bag.svg'

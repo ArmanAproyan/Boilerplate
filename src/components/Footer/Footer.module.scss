@@ -1,10 +1,11 @@
 .footer {
   @extend %flex-center;
 
-  color: $color-main;
-  background-color: $color-white;
+  color: $color_main;
+  background-color: $color_white;
 
   z-index: 3;
   width: 100%;
   padding: 16px 32px;
+  justify-content: start;
 }

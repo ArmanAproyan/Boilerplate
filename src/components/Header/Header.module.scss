@@ -3,7 +3,7 @@
   @extend %flex-between;
 
   color: $color_black;
-  background-color: $color-white;
+  background-color: $color_white;
 
   height: 56px;
   padding: 32px 64px;
@@ -29,10 +29,10 @@
     @extend %flex-center;
     @extend %primary-button;
 
-    color: $color-white;
+    color: $color_white;
 
-    cursor: pointer;
     padding: 8px;
+    cursor: pointer;
 
     @include max-breakpoint(mobile) {
       height: 28px;

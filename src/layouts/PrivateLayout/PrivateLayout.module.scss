@@ -1,9 +1,9 @@
 .layout {
-  background-color: $color-light-gray;
+  @extend %flex-column;
 
-  display: flex;
+  background-color: $color_light-gray;
+
   min-height: 100vh;
-  flex-direction: column;
 
   &__main {
     padding: 20px;
