@@ -63,16 +63,6 @@
     &_active {
       color: $color_white;
       background-color: $color_black;
-
-      font-weight: 600;
-    }
-
-    &:hover,
-    &:active {
-      color: $color_white;
-      background-color: $color_blur;
-
-      outline: none;
     }
   }
 }
