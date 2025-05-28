@@ -2,13 +2,12 @@ import { useNavigate } from 'react-router-dom'
 import { GucciLogo } from '@/assets/icons'
 import { Burger } from 'components'
 import { ROUTE } from '@/routes'
-import { useAuthenticate, useClassNames } from '@/hooks'
+import { useClassNames } from '@/hooks'
 
 import styles from './Header.module.scss'
 
 export const Header = () => {
   const navigate = useNavigate()
-  const [logInfo, handleAuthToggle] = useAuthenticate()
 
   const { cn } = useClassNames('header', styles)
 
@@ -18,9 +17,6 @@ export const Header = () => {
         <GucciLogo onClick={() => navigate(ROUTE.HOME)} className={cn('__logo')} />
       </div>
       <div className={cn('__rightSection')}>
-        <div className={cn('__login')} onClick={handleAuthToggle}>
-          {logInfo}
-        </div>
         <Burger />
       </div>
     </header>

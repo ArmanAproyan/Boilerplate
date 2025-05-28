@@ -24,23 +24,7 @@
       gap: 5px;
     }
   }
-
-  &__login {
-    @extend %flex-center;
-    @extend %primary-button;
-
-    color: $color_white;
-
-    padding: 8px;
-    cursor: pointer;
-
-    @include max-breakpoint(mobile) {
-      height: 28px;
-      font-size: 14px;
-      border-radius: 8px;
-    }
-  }
-
+  
   &__icons {
     width: 24px;
     height: 24px;

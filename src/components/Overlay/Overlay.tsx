@@ -1,12 +1,13 @@
 import { NavList } from 'components'
 import { TOverlay } from './Overlay.types'
-import { useClassNames } from '@/hooks'
+import { useAuthenticate, useClassNames } from '@/hooks'
 import classNames from 'classnames'
 
 import styles from './OverLay.module.scss'
 
 export const OverLay = ({ isOpen, onClose }: TOverlay) => {
   const { cn } = useClassNames('header', styles)
+  const [logInfo, handleAuthToggle] = useAuthenticate()
 
   return (
     <>
@@ -23,6 +24,17 @@ export const OverLay = ({ isOpen, onClose }: TOverlay) => {
         </div>
         <div className={cn('__nav')}>
           <NavList onClose={onClose} />
+        </div>
+        <div className={styles.footer}>
+          <div
+            className={styles.footer__login}
+            onClick={() => {
+              handleAuthToggle()
+              onClose()
+            }}
+          >
+            {logInfo}
+          </div>
         </div>
       </div>
     </>

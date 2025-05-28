@@ -1,9 +1,9 @@
 .container {
   @extend %flex-center;
 
+  user-select: none;
   position: relative;
   flex-direction: column;
-  user-select: none;
 
   &__toggle {
     @extend %flex-between;
