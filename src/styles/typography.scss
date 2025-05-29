@@ -2,9 +2,9 @@
 @use './mixins' as *;
 
 %welcome-title {
-  color: $color_main;
+  color: $color_black;
 
-  font-size: 36px;
+  font-size: 18px;
   margin: 40px 0;
   font-weight: 700;
   text-align: start;

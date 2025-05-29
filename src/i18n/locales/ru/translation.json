@@ -1,12 +1,12 @@
 {
   "NotFoundPage": "Страница не найдена 404",
   "AboutPage": "О нас",
-  "AccauntPage": "Добро пожаловать",
+  "AccauntPage": "",
   "ActionsPage": "Действия",
   "ContactPage": "Контакты",
   "DashboardPage": "Панель Управления",
   "HistoryPage": "История",
-  "HomePage": "Главная Страницу",
+  "HomePage": "Главная Страница",
   "LoginPage": "Авторизация",
   "ProductsPage": "Продукты",
 

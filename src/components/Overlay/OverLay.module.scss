@@ -46,7 +46,7 @@
 
   width: 100%;
   height: 70px;
-  padding: 15px;
+  padding: 5px;
 
   &__nav {
     @extend %flex-start;
@@ -54,7 +54,6 @@
 
     padding: 40px;
     overflow-y: auto;
-    overflow-x: hidden;
 
     @include max-breakpoint(mobile) {
       padding: 15px;
@@ -91,7 +90,7 @@
   @extend %flex-end;
 
   width: 100%;
-  padding: 20px;
+  padding: 5px;
 
   &__login {
     @extend %flex-center;
@@ -105,9 +104,7 @@
     @include max-breakpoint(mobile) {
       height: 28px;
       font-size: 14px;
-      margin-top: 50px;
       border-radius: 8px;
     }
   }
 }
-
