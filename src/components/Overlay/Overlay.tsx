@@ -19,7 +19,7 @@ export const OverLay = ({ isOpen, onClose }: TOverlay) => {
       <div className={classNames(styles.overlay, { [styles.active]: isOpen })}>
         <div className={cn()}>
           <div onClick={onClose} className={cn('__close')}>
-            <span className={cn('__close__icone')}>x</span>
+            <span className={cn('__close__icon')}>x</span>
           </div>
         </div>
         <div className={cn('__nav')}>

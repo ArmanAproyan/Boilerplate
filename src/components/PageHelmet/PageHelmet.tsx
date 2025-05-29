@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { THelmetProps } from './PageHelmet.props'
+import { THelmetProps } from './PageHelmet.types'
 
 export const PageHelmet = ({
   title = 'Gucci',

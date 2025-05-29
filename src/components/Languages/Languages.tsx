@@ -39,7 +39,7 @@ export const Languages = () => {
                 [cn('__item_active')]: code === langCode
               })}
               onClick={() => handleSelect(code)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSelect(code)}
+              onKeyDown={({ key }) => key === 'Enter' && handleSelect(code)}
             >
               {label}
             </li>

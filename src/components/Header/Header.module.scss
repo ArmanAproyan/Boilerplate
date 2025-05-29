@@ -24,17 +24,6 @@
       gap: 5px;
     }
   }
-  
-  &__icons {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-
-    @include max-breakpoint(mobile) {
-      width: 20px;
-      height: 20px;
-    }
-  }
 
   &__logo {
     width: 120px;
